@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes , Route , Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Routes , Route} from "react-router-dom";
 
 import LanPage from "./components/LandingPage";
 import TopMenu from "./components/TopBar";
@@ -13,6 +13,9 @@ function App() {
     <Router>
  <div>
  <TopMenu />
+
+   <div style={{padding:'10px'}}>
+
     <Routes>
    <Route exact path="/contact-us" element={<Contact/>}/>
     <Route exact path="/products" element={<Products/>}/>
@@ -21,6 +24,9 @@ function App() {
 
     <Route path="*" element={<PageNotFound/>}/>
    </Routes>
+
+   </div>
+
  </div>
 
  </Router>
